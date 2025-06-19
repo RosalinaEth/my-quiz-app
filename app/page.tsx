@@ -53,7 +53,14 @@ export default function Page() {
   const [finished, setFinished] = useState(false);
   const router = useRouter();
 
-  const handleAnswer = (type: string) => {
+  const initialScore = {
+  Water: 0,
+  Air: 0,
+  Earth: 0,
+  Fire: 0,
+};
+
+  const handleAnswer = (type: keyof typeof initialScore) => {
     setScore((prev) => ({ ...prev, [type]: prev[type] + 1 }));
     if (step + 1 >= questions.length) {
       setFinished(true);
