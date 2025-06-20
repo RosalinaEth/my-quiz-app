@@ -61,7 +61,7 @@ export default function Page() {
   Fire: 0,
 };
 
-  const handleAnswer = (type: string) => {
+  const handleAnswer = (type: keyof typeof initialScore) => {
   setScore((prev) => ({ ...prev, [type]: prev[type] + 1 }));
   if (step + 1 >= questions.length) {
     setFinished(true);
