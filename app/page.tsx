@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { questions } from "@/lib/questions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import type { ElementType } from "@/lib/questions";
 import Image from "next/image";
 
 const results = {
@@ -60,7 +61,7 @@ export default function Page() {
   Fire: 0,
 };
 
-  const handleAnswer = (type: keyof typeof initialScore) => {
+  const handleAnswer = (type: string) => {
     setScore((prev) => ({ ...prev, [type]: prev[type] + 1 }));
     if (step + 1 >= questions.length) {
       setFinished(true);
@@ -80,6 +81,14 @@ export default function Page() {
   };
 
   const result = results[resultKey as keyof typeof results];
+const handleAnswer = (type: any) => {
+  setScore((prev) => ({ ...prev, [type]: prev[type] + 1 }));
+  if (step + 1 >= questions.length) {
+    setFinished(true);
+  } else {
+    setStep(step + 1);
+  }
+};
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
@@ -92,12 +101,12 @@ export default function Page() {
                 <div className="mt-4 grid grid-cols-1 gap-2">
                   {questions[step].options.map((option, index) => (
                 <Button
-              key={index}
-            onClick={() => handleAnswer(option.type)}
-          variant="outline"
-         >
-          {option.label}
-        </Button>
+                key={index}
+              onClick={() => handleAnswer(option.type)}
+  variant="outline"
+>
+  {option.label}
+</Button>
         ))}
           </div>
 

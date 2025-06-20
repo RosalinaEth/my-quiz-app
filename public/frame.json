@@ -1,0 +1,13 @@
+{
+  "version": "vNext",
+  "name": "Elemental Quiz 🔮",
+  "description": "Are you Fire, Water, Earth, or Air?",
+  "homepage": "https://YOUR-APP-URL.vercel.app",
+  "frame": {
+    "post_url": "https://YOUR-APP-URL.vercel.app",
+    "buttons": ["Start Quiz"]
+  },
+  "image": {
+    "src": "https://YOUR-APP-URL.vercel.app/og.png"
+  }
+}

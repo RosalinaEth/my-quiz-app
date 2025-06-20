@@ -1,4 +1,13 @@
-export const questions = [
+export type ElementType = "Water" | "Air" | "Earth" | "Fire";
+export interface QuestionOption {
+  label: string;
+  type: ElementType;
+}
+export interface Question {
+  text: string;
+  options: QuestionOption[];
+}
+export const questions: Question[] = [
   {
     text: "When someone’s upset, do you:",
     options: [
