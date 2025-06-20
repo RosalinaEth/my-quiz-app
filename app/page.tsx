@@ -62,13 +62,13 @@ export default function Page() {
 };
 
   const handleAnswer = (type: string) => {
-    setScore((prev) => ({ ...prev, [type]: prev[type] + 1 }));
-    if (step + 1 >= questions.length) {
-      setFinished(true);
-    } else {
-      setStep(step + 1);
-    }
-  };
+  setScore((prev) => ({ ...prev, [type]: prev[type] + 1 }));
+  if (step + 1 >= questions.length) {
+    setFinished(true);
+  } else {
+    setStep(step + 1);
+  }
+};
 
   const resultKey = getFinalResult(score);
 
@@ -81,14 +81,7 @@ export default function Page() {
   };
 
   const result = results[resultKey as keyof typeof results];
-const handleAnswer = (type: any) => {
-  setScore((prev) => ({ ...prev, [type]: prev[type] + 1 }));
-  if (step + 1 >= questions.length) {
-    setFinished(true);
-  } else {
-    setStep(step + 1);
-  }
-};
+
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
