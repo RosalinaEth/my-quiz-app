@@ -1,10 +1,11 @@
 // app/result/page.tsx
-"use client";
+"use client"
 
-import { useSearchParams, useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
+import { Suspense } from "react"
+import { useSearchParams, useRouter } from "next/navigation"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 const results = {
   Water: {
@@ -35,14 +36,14 @@ const results = {
       "Bold, energetic, and unstoppable. *Psychology insight:* Your high extraversion and dopamine-driven motivation thrive on achievement (linked to Type A traits).",
     image: "/images/fire-farcaster-hyouka.jpg",
   },
-};
+}
 
-export default function ResultPage() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
+function ResultContent() {
+  const searchParams = useSearchParams()
+  const router = useRouter()
 
-  const type = searchParams.get("type");
-  const result = type && results[type as keyof typeof results];
+  const type = searchParams.get("type")
+  const result = type && results[type as keyof typeof results]
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
@@ -77,5 +78,13 @@ export default function ResultPage() {
         </CardContent>
       </Card>
     </div>
-  );
+  )
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={<div className="p-4 text-center">Loading result...</div>}>
+      <ResultContent />
+    </Suspense>
+  )
 }
