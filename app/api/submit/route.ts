@@ -54,7 +54,7 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     version: "vNext",
-    image: "https://my-quiz-app-wff4.vercel.app/images/og-placeholder.png", // تقدر تغير الخلفية لاحقًا
+    image: "https://my-quiz-app-wff4.vercel.app/images/which-element-are-you.png",
     post_url: "https://my-quiz-app-wff4.vercel.app/api/submit",
     buttons: options.map((option) => ({
       label: option.label,
@@ -62,4 +62,4 @@ export async function POST(req: Request) {
       post_data: `answer=${option.type}&step=${step + 1}&score=${encodeURIComponent(JSON.stringify(score))}`,
     })),
   })
-}
+} 
