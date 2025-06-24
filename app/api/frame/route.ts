@@ -5,7 +5,7 @@ export async function GET() {
   return NextResponse.json({
     version: "vNext",
     name: "Personality Quiz",
-    image: "https://my-quiz-app-wff4.vercel.app/api/og",
+    image: "https://my-quiz-app-wff4.vercel.app/images/which-element-are-you.png",
     post_url: "https://my-quiz-app-wff4.vercel.app/api/submit",
     buttons: [
       { label: "Start quiz", action: "post" }
