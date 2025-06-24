@@ -33,7 +33,7 @@ export async function POST(req: Request) {
   // لو وصلنا لنهاية الأسئلة، نعرض النتيجة
   if (step >= questions.length) {
     const top = Object.entries(score).sort((a, b) => b[1] - a[1])[0][0]
-    const imageUrl = `https://my-quiz-app-wff4.vercel.app/images/${top.toLowerCase()}-farcaster-hyouka.jpg`
+    const imageUrl = https://my-quiz-app-wff4.vercel.app/images/${top.toLowerCase()}-farcaster-hyouka.jpg
 
     return NextResponse.json({
       version: "vNext",
@@ -41,9 +41,9 @@ export async function POST(req: Request) {
       post_url: "https://my-quiz-app-wff4.vercel.app/api/submit",
       buttons: [
         {
-          label: "See yours",
+          label: "Share result",
           action: "link",
-          target: "https://my-quiz-app-wff4.vercel.app",
+          target: https://warpcast.com/~/compose?text=I+got+${top}+in+the+Element+Quiz!+Try+it+here+👇&embeds=https://my-quiz-app-wff4.vercel.app,
         },
       ],
     })
@@ -62,5 +62,4 @@ export async function POST(req: Request) {
       post_data: `answer=${option.type}&step=${step + 1}&score=${encodeURIComponent(JSON.stringify(score))}`,
     })),
   })
-} 
-// trigger redeploy ⏳
+}
