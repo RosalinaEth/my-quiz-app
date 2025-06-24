@@ -33,7 +33,7 @@ export async function POST(req: Request) {
   // لو وصلنا لنهاية الأسئلة، نعرض النتيجة
   if (step >= questions.length) {
     const top = Object.entries(score).sort((a, b) => b[1] - a[1])[0][0]
-    const imageUrl = https://my-quiz-app-wff4.vercel.app/images/${top.toLowerCase()}-farcaster-hyouka.jpg
+    const imageUrl = `https://my-quiz-app-wff4.vercel.app/images/${top.toLowerCase()}-farcaster-hyouka.jpg`
 
     return NextResponse.json({
       version: "vNext",
