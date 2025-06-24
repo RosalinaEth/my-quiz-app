@@ -13,6 +13,8 @@ export default function Head() {
       {/* Open Graph OG tags */}
       <meta property="og:title" content="Which Element Are You?" />
       <meta property="og:image" content="https://my-quiz-app-wff4.vercel.app/images/which-element-are-you.jpg" />
+      <meta name="twitter:site" content="@CryptoBTCsats" />
+      <meta name="twitter:creator" content="@CryptoBTCsats" />
     </>
   )
 }
