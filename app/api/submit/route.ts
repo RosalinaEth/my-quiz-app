@@ -43,7 +43,7 @@ export async function POST(req: Request) {
         {
           label: "Share result",
           action: "link",
-          target: https://warpcast.com/~/compose?text=I+got+${top}+in+the+Element+Quiz!+Try+it+here+👇&embeds=https://my-quiz-app-wff4.vercel.app,
+          target: `https://warpcast.com/~/compose?text=I+got+${top}+in+the+Element+Quiz!+Try+it+here+&embeds=https://my-quiz-app-wff4.vercel.app/api/frame`,
         },
       ],
     })
