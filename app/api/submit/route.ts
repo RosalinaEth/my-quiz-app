@@ -36,18 +36,23 @@ export async function POST(req: Request) {
     const imageUrl = `https://my-quiz-app-wff4.vercel.app/images/${top.toLowerCase()}-farcaster-hyouka.jpg`
 
     return NextResponse.json({
-      version: "vNext",
-      image: imageUrl,
-      post_url: "https://my-quiz-app-wff4.vercel.app/api/submit",
-      buttons: [
-        {
-          label: "Share result",
-          action: "link",
-          target: `https://warpcast.com/~/compose?text=I+got+${top}+in+the+Element+Quiz!+Try+it+here+&embeds=https://my-quiz-app-wff4.vercel.app/api/frame`,
-        },
-      ],
-    })
-  }
+  version: "vNext",
+  image: imageUrl,
+  post_url: "https://my-quiz-app-wff4.vercel.app/api/submit",
+  buttons: [
+    {
+      label: "Share result",
+      action: "link",
+      target: `https://warpcast.com/~/compose?text=I+got+${top}+in+the+Element+Quiz!+Try+it+here+&embeds=https://my-quiz-app-wff4.vercel.app/api/frame`,
+    },
+    {
+      label: "See yours",
+      action: "link",
+      target: "https://my-quiz-app-wff4.vercel.app", // أو ممكن ترجعيه للرزلت الأصلية لاحقًا
+    },
+  ],
+})
+
 
   const question = questions[step]
   const options = question.options.slice(0, 4)
