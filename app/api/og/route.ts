@@ -7,7 +7,7 @@ export async function GET() {
     <html>
       <head>
         <meta property="og:title" content="Which Element Are You?" />
-        <meta property="og:image" content="https://my-quiz-app-wff4.vercel.app/images/which-element-are-you.v2.jpg" />
+        <meta property="og:image" content="https://i.imgur.com/7uT6g4z.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body>

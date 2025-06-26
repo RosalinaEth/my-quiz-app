@@ -1,14 +1,11 @@
-// app/frame-preview/page.tsx
-
 export const metadata = {
-  metadataBase: new URL("https://my-quiz-app-wff4.vercel.app"),
   title: "Which Element Are You?",
   description: "Discover your element in this interactive personality quiz.",
   openGraph: {
     title: "Which Element Are You?",
     images: [
       {
-        url: "/images/which-element-are-you.final.jpg",
+        url: "https://i.imgur.com/7uT6g4z.jpeg",
         width: 1200,
         height: 628,
       },
@@ -19,13 +16,13 @@ export const metadata = {
     title: "Which Element Are You?",
     images: [
       {
-        url: "/images/which-element-are-you.final.jpg",
+        url: "https://i.imgur.com/7uT6g4z.jpeg",
         width: 1200,
         height: 628,
       },
     ],
   },
-};
+}
 
 export default function Page() {
   return (
@@ -37,5 +34,5 @@ export default function Page() {
         }}
       />
     </div>
-  );
+  )
 }
