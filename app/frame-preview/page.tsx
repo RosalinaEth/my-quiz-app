@@ -8,7 +8,7 @@ export const metadata = {
     title: "Which Element Are You?",
     images: [
       {
-        url: "/images/which-element-are-you.jpg",
+        url: "/images/which-element-are-you.v2.jpg",
         width: 1200,
         height: 628,
       },
@@ -19,7 +19,7 @@ export const metadata = {
     title: "Which Element Are You?",
     images: [
       {
-        url: "/images/which-element-are-you.jpg",
+        url: "/images/which-element-are-you.v2.jpg",
         width: 1200,
         height: 628,
       },
