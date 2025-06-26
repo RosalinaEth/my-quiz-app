@@ -1,8 +1,11 @@
+// app/frame-preview/page.tsx
 export const metadata = {
+  metadataBase: new URL("https://my-quiz-app-wff4.vercel.app"),
   title: "Which Element Are You?",
   description: "Discover your element in this interactive personality quiz.",
   openGraph: {
     title: "Which Element Are You?",
+    description: "Discover your element in this interactive personality quiz.",
     images: [
       {
         url: "https://res.cloudinary.com/dzdas1gyp/image/upload/v1750974302/og-clean_h21k6u.jpg",
@@ -14,6 +17,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Which Element Are You?",
+    description: "Discover your element in this interactive personality quiz.",
     images: [
       {
         url: "https://res.cloudinary.com/dzdas1gyp/image/upload/v1750974302/og-clean_h21k6u.jpg",
