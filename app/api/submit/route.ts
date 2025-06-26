@@ -59,7 +59,7 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     version: "vNext",
-    image: "https://i.imgur.com/7uT6g4z.jpeg",
+    image: "https://res.cloudinary.com/dzdas1gyp/image/upload/v1750974302/og-clean_h21k6u.jpg",
     post_url: "https://my-quiz-app-wff4.vercel.app/api/submit",
     buttons: options.map((option) => ({
       label: option.label,

@@ -7,7 +7,7 @@ export async function GET() {
     <html>
       <head>
         <meta property="og:title" content="Which Element Are You?" />
-        <meta property="og:image" content="https://i.imgur.com/7uT6g4z.jpeg" />
+        <meta property="og:image" content="https://res.cloudinary.com/dzdas1gyp/image/upload/v1750974302/og-clean_h21k6u.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body>

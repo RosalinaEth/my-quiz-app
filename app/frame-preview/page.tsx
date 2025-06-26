@@ -5,7 +5,7 @@ export const metadata = {
     title: "Which Element Are You?",
     images: [
       {
-        url: "https://i.imgur.com/7uT6g4z.jpeg",
+        url: "https://res.cloudinary.com/dzdas1gyp/image/upload/v1750974302/og-clean_h21k6u.jpg",
         width: 1200,
         height: 628,
       },
@@ -16,7 +16,7 @@ export const metadata = {
     title: "Which Element Are You?",
     images: [
       {
-        url: "https://i.imgur.com/7uT6g4z.jpeg",
+        url: "https://res.cloudinary.com/dzdas1gyp/image/upload/v1750974302/og-clean_h21k6u.jpg",
         width: 1200,
         height: 628,
       },
